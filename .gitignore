@@ -1,5 +1,21 @@
-ubioworo/profile.yml
-ubioworo/dbt_project.yml
-.env 
-pyproject.toml 
-.venvubioworo/profile.yml
+# Python / Virtual Environment
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables
+.env
+
+# dbt sensitive profiles and build artifacts
+profiles.yml
+**/profiles.yml
+target/
+dbt_packages/
+dbt_internal_packages/
+logs/
+
+# Airflow
+logs/
+airflow.db
+airflow.cfg

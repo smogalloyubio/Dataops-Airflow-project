@@ -1,0 +1,20 @@
+[project]
+name = "dataops-airflow-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Rukevwe Ubioworo", email = "smogalloyubio@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "dbt-core>=1.12.7",
+    "dbt-databricks>=1.13.1",
+]
+
+[project.scripts]
+dataops-airflow-project = "dataops_airflow_project:main"
+
+[build-system]
+requires = ["uv_build>=0.13.10,<0.14.0"]
+build-backend = "uv_build"

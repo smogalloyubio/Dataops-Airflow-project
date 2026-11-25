@@ -311,3 +311,79 @@ https://docs.getdbt.com/docs/configure-your-profile
 [0m14:31:47.870682 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe8cc085c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe8b85285c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe8b86e8470>]}
 [0m14:31:47.871305 [debug] [MainThread]: Flushing usage events
 [0m14:31:48.235529 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:39:33.591319 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72afac8fbf80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72afab3cdeb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72afad538830>]}
+
+
+============================== 16:39:33.626492 | 33a9cfcd-567b-4ab3-8318-cbfe4a17557b ==============================
+[0m16:39:33.626492 [info ] [MainThread]: Running with dbt=1.12.7
+[0m16:39:33.627457 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'target_path': 'None', 'static_parser': 'True', 'profiles_dir': '/home/codespace/.dbt', 'introspect': 'True', 'no_print': 'None', 'log_format': 'default', 'maximum_seed_size_mib': '1', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'empty': 'None', 'invocation_command': 'dbt init', 'write_json': 'True', 'quiet': 'False', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'hints_enabled': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'printer_width': '80', 'log_cache_events': 'False'}
+[0m16:39:33.687654 [info ] [MainThread]: Creating dbt configuration folder at /home/codespace/.dbt
+[0m16:40:25.539677 [debug] [MainThread]: Starter project path: /workspaces/Dataops-Airflow-project/.venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m16:40:25.545271 [info ] [MainThread]: Setting up your profile.
+[0m16:40:31.279984 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m16:40:31.280610 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m16:40:31.281139 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m16:46:49.656119 [info ] [MainThread]: Profile ubioworos written to /home/codespace/.dbt/profiles.yml using target's profile_template.yml and your supplied values.
+[0m16:46:49.661224 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m16:46:49.662284 [info ] [MainThread]: dbt version: 1.12.7
+[0m16:46:49.663065 [info ] [MainThread]: python version: 3.12.3
+[0m16:46:49.663699 [info ] [MainThread]: python path: /workspaces/Dataops-Airflow-project/.venv/bin/python
+[0m16:46:49.664179 [info ] [MainThread]: os info: Linux-6.8.0-1070-azure-x86_64-with-glibc2.39
+[0m16:46:49.715598 [info ] [MainThread]: Using profiles dir at /home/codespace/.dbt
+[0m16:46:49.716320 [info ] [MainThread]: Using profiles.yml file at /home/codespace/.dbt/profiles.yml
+[0m16:46:49.716863 [info ] [MainThread]: Using dbt_project.yml file at /workspaces/Dataops-Airflow-project/ubioworos/dbt_project.yml
+[0m16:46:49.717347 [info ] [MainThread]: adapter type: databricks
+[0m16:46:49.717813 [info ] [MainThread]: adapter version: 1.13.1
+[0m16:46:49.856117 [info ] [MainThread]: Configuration:
+[0m16:46:49.856814 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:46:49.857327 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:46:49.857812 [info ] [MainThread]: Required dependencies:
+[0m16:46:49.858280 [debug] [MainThread]: Executing "git --help"
+[0m16:46:49.860580 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:46:49.861091 [debug] [MainThread]: STDERR: "b''"
+[0m16:46:49.861616 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:46:49.862142 [info ] [MainThread]: Connection:
+[0m16:46:49.862647 [info ] [MainThread]:   host: dbc-f96a0d3b-b3da.cloud.databricks.com
+[0m16:46:49.863319 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/69db104cdd201cc8
+[0m16:46:49.863968 [info ] [MainThread]:   catalog: dbt_toturial_dev
+[0m16:46:49.864581 [info ] [MainThread]:   schema: source 
+[0m16:46:49.865217 [info ] [MainThread]: Registered adapter: databricks=1.13.1
+[0m16:46:49.987214 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=debug) - Creating connection
+[0m16:46:49.987708 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m16:46:50.448240 [info ] [MainThread]: Databricks adapter:   SPOG host (host_type='workspace'): no
+[0m16:46:50.448978 [info ] [MainThread]: Databricks adapter:   workspace_id (from ?o= in http_path): None
+[0m16:46:50.449613 [info ] [MainThread]: Databricks adapter:   databricks-sql-connector version: 4.9.0 (supported)
+[0m16:46:50.450172 [info ] [MainThread]: Databricks adapter:   databricks-sdk version: 0.157.0 (supported)
+[0m16:46:50.450676 [debug] [MainThread]: Using databricks connection "debug"
+[0m16:46:50.451103 [debug] [MainThread]: On debug: select 1 as id
+[0m16:46:50.451494 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:46:52.305595 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f1e8ef-d071-1b5a-a646-aadb1a875aff) - Created
+[0m16:46:56.055541 [debug] [MainThread]: SQL status: OK in 5.600 seconds
+[0m16:46:56.056672 [debug] [MainThread]: Databricks adapter: Cursor(session-id=01f1e8ef-d071-1b5a-a646-aadb1a875aff, command-id=01f1e8ef-d0d8-165d-b891-d26349fdc0ed) - Closing
+[0m16:46:56.273534 [debug] [MainThread]: On debug: Close
+[0m16:46:56.274150 [debug] [MainThread]: Databricks adapter: Connection(session-id=01f1e8ef-d071-1b5a-a646-aadb1a875aff) - Closing
+[0m16:46:56.432106 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m16:46:56.433396 [info ] [MainThread]: [32mAll checks passed![0m
+[0m16:46:56.434570 [info ] [MainThread]: Your new dbt project "ubioworos" was created!
+Initialized new project in /workspaces/Dataops-Airflow-project/ubioworos/ubioworos
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:46:56.437082 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 442.92642, "process_in_blocks": "207904", "process_kernel_time": 0.663309, "process_mem_max_rss": "335628", "process_out_blocks": "90032", "process_user_time": 8.301331}
+[0m16:46:56.438240 [debug] [MainThread]: Command `dbt init` succeeded at 16:46:56.438083 after 442.93 seconds
+[0m16:46:56.439054 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72afaaeb96a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72afab17fda0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72af98422db0>]}
+[0m16:46:56.440178 [debug] [MainThread]: Flushing usage events
+[0m16:46:56.898156 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: source
+    database: dbt_toturial_dev
+    schema: source
+    tables:
+      - name: dim_customer
+      - name: dim_product
+      - name: dim_location
+      - name: dim_payment
+      - name: dim_order_status
+      - name: fact_table

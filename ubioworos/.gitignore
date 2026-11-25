@@ -3,6 +3,4 @@ target/
 dbt_packages/
 logs/
 .env
-profile.yaml 
-dbt_project.yaml 
-
+dbt_internal_packages/

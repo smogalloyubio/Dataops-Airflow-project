@@ -1,0 +1,134 @@
+version: 2
+
+models:
+  - name: bronze_dim_customer
+    description: "Raw staged customer dimension table from Databricks source"
+    columns:
+      - name: customer_key
+        description: "Primary key for customers"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: bronze_dim_product
+    description: "Raw staged product dimension table"
+    columns:
+      - name: product_key
+        description: "Primary key for products"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: bronze_dim_location
+    description: "Raw staged location dimension table"
+    columns:
+      - name: country
+        description: "Primary key for locations"
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+               values: ['UK','USA','Canada','Germany']
+
+
+  - name: bronze_dim_payment
+    description: "Raw staged payment dimension table"
+    columns:
+      - name: payment_method
+        description: "Primary key for payment methods"
+        data_tests:
+          - unique
+          - not_null
+          - accepted_values:
+             arguments:
+              values: [ 'Credit Card', 'PayPal', 'Bank Transfer', 'Debit Card', 'Apple Pay']
+              config:
+                severity: warn
+
+
+                
+
+  - name: bronze_dim_order_status
+    description: "Raw staged order status dimension table"
+    columns:
+      - name: order_status
+        description: "Primary key for order statuses"
+        data_tests:
+          - unique
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [ 'Processing', 'Shipped', 'Delivered']
+              config:
+                severity: warn
+
+  - name: bronze_dim_fact_table
+    description: "Raw staged fact table"
+    columns:
+      - name: order_id
+        description: "Primary key for orders"
+        data_tests:
+          - unique
+          - not_null
+
+      - name: customer_key
+        description: "Foreign key to customer dimension"
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('bronze_dim_customer')
+                field: customer_key
+
+      - name: product_key
+        description: "Foreign key to product dimension"
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('bronze_dim_product')
+                field: product_key
+
+      - name: location_key
+        description: "Foreign key to location dimension"
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('bronze_dim_location')
+                field: location_key
+
+      - name: payment_key
+        description: "Foreign key to payment method dimension"
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('bronze_dim_payment')
+                field: payment_key
+
+      - name: order_status_key
+        description: "Foreign key to order status dimension"
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('bronze_dim_order_status')
+                field: order_status_key
+
+      - name: order_date
+        description: "Date of the order"
+        data_tests:
+          - not_null
+
+      - name: quantity
+        description: "Quantity of products ordered"
+        data_tests:
+          - not_null
+          - not_negative
+
+      - name: unit_price
+        description: "Price per unit of product"
+        data_tests:
+          - not_null
+          - non_negative

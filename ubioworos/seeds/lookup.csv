@@ -1,0 +1,11 @@
+customer_id,customer_name,customer_address,email,phone_number
+C01,Alice Johnson,"123 Maple Street, London, UK",alice.johnson@example.co.uk,+44-20-7946-0192
+C02,Bob Smith,"456 Oak Avenue, New York, USA",bob.smith@example.com,+1-212-555-0148
+C03,Charlie Brown,"789 Pine Road, Toronto, Canada",charlie.brown@example.ca,+1-416-555-0183
+C04,Diana Prince,"321 Elm Boulevard, Berlin, Germany",diana.prince@example.de,+49-30-901820-41
+C05,Ethan Hunt,"654 Cedar Lane, Manchester, UK",ethan.hunt@example.co.uk,+44-161-496-0235
+C06,Fiona Gallagher,"987 Birch Way, Chicago, USA",fiona.gallagher@example.com,+1-312-555-0194
+C07,George Miller,"147 Spruce Court, Vancouver, Canada",george.miller@example.ca,+1-604-555-0167
+C08,Hannah Abbott,"258 Willow Drive, Munich, Germany",hannah.abbott@example.de,+49-89-2154-8812
+C09,Ian Wright,"369 Ash Street, Birmingham, UK",ian.wright@example.co.uk,+44-121-496-0319
+C10,Julia Roberts,"741 Redwood Terrace, Los Angeles, USA",julia.roberts@example.com,+1-213-555-0126

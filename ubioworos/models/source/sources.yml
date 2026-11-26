@@ -11,3 +11,4 @@ sources:
       - name: dim_payment
       - name: dim_order_status
       - name: fact_table
+      - name: silver

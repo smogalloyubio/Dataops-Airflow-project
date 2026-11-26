@@ -34,8 +34,9 @@ jobs:
           DATABRICKS_PROD_TOKEN: ${{ secrets.DATABRICKS_PROD_TOKEN }}
         run: |
           ls -la
-          dbt debug --target dev --profiles-dir .
-          dbt parse --target dev --profiles-dir .
+          cd ubioworos
+          dbt debug --target dev 
+          dbt parse --target dev 
 
       - name: Run freshness and dbt build for prod
         env:

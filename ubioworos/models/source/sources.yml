@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: source
-    database: dbt_toturial_dev
+    database: "{{target.catalog}}"
     schema: source
     tables:
       - name: dim_customer
@@ -14,7 +14,7 @@ sources:
       - name: silver
 
   - name: bronze_source
-    database: dbt_toturial_dev
+    database: "{{target.catalog}}"
     schema: bronze
     tables:
       - name: promo_product 

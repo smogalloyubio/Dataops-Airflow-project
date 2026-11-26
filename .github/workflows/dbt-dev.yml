@@ -29,8 +29,8 @@ jobs:
 
       - name: Create profiles.yml and validate prod target
         env:
-          DATABRICKS_PROD_HOST: ${{ secrets.DATABRICKS_PROD_HOST }}
-          DATABRICKS_PROD_HTTP_PATH: ${{ secrets.DATABRICKS_PROD_HTTP_PATH }}
+          DATABRICKS_PROD_HOST: ${{ secrets.DATABRICKS_PROD_HOSTS }}
+          DATABRICKS_PROD_HTTP_PATH: ${{ secrets.DATABRICKS_PROD_HTTP_PATHS }}
           DATABRICKS_PROD_TOKEN: ${{ secrets.DATABRICKS_PROD_TOKEN }}
         run: |
           cat << 'EOF' > profiles.yml

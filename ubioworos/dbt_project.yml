@@ -44,4 +44,6 @@ models:
 seeds:
   ubioworos:
     +schema: bronze
+    promo_product:
+      +schema: bronze
   

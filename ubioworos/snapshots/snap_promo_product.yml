@@ -1,0 +1,14 @@
+snapshots:
+  - name: snap_promo_product
+    description: "SCD Type 2 snapshot tracking changes on promo_product."
+    relation: source('bronze_source', 'promo_product')
+    config:
+      schema: bronze
+      unique_key: product_key
+      strategy: check
+      check_cols:
+        - product_name
+        - category
+        - unit_price
+        - stock_status
+      invalidate_hard_deletes: true

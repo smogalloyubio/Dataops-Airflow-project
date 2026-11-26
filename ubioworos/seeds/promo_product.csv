@@ -1,0 +1,5 @@
+product_key,product_name,category,unit_price,stock_status
+P01,Mechanical Keyboard,Electronics,140.00,in_stock
+P02,Wireless Mouse,Electronics,45.50,out_stock
+P03,Desk Lamp,Home,38.00,low_stock
+P04,Coffee Mug,Kitchen,14.00,in_stock
